@@ -26,23 +26,27 @@
 <font color="red">如果关闭命令窗口任然保持运行，可忽略以下方法。</font>
 
 1. 使用 screen 命令：
+    ```
    ​	①在终端中执行以下命令以创建一个新的 screen 会话：
    ```
    screen -S mysession
    ```
       ②定位到public_nodejs所在目录（XXXXX为用户名）输入以下命令：
+    ```
    `cd /usr/home/XXXXX/domains/XXXXX.serv00.net/public_nodejs`
+    ```
    ​	③在 screen 会话中，运行应用程序：
    ```
    node app.js
    ```
    ​	④按下 Ctrl + A，然后按下 D 键将 screen 会话分离。
+    ```
    ​	⑤关闭终端窗口后，应用程序将继续在后台运行。下次需要重新连接到 screen 会话时，可以使用以下命令：
    ```
    screen -r mysession
    ```
 
-2. 使用 tmux 命令：
+3. 使用 tmux 命令：
 
    ​	①首先，确保已安装 tmux（如果尚未安装）：
 
